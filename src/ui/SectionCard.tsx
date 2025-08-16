@@ -38,8 +38,8 @@ const SectionCard: React.FC<SectionCardProps> = ({
         <ul
           className={`list-disc list-outside pl-5 space-y-1 text-sm text-gray-400 marker:text-gray-600`}
         >
-          {highlights.map((highlight) => (
-            <li key={highlight} className="markdown-content">
+          {highlights.map((highlight, index) => (
+            <li key={`${highlight}-${index}`} className="markdown-content">
               <ReactMarkdown>{highlight}</ReactMarkdown>
             </li>
           ))}
