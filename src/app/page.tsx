@@ -5,6 +5,7 @@ import fs from "fs";
 import yaml from "js-yaml";
 import path from "path";
 import { ResumeData } from "@/data/types";
+import { FolderOpen, Trophy } from "lucide-react";
 import {
   Header,
   Summary,
@@ -36,8 +37,8 @@ export default function Page() {
             <Summary summary={info[0].summary} />
             <Education education={education} />
             <Experience experience={experience} />
-            <Normal normal={projects} name="Projects" />
-            <Normal normal={awards} name="Awards" />
+            <Normal normal={projects} name="Projects" icon={FolderOpen} />
+            <Normal normal={awards} name="Awards" icon={Trophy} />
           </div>
 
           <div className="col-span-1 space-y-12">

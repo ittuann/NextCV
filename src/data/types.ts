@@ -45,7 +45,6 @@ export interface Normal {
   name: string;
   date: string;
   summary: string;
-  url: string;
   highlights: string[];
 }
 
