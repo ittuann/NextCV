@@ -1,16 +1,23 @@
 # NextCV
 
-📄 A modern resume website template. Build and manage your resume in Markdown — built with Tailwind CSS and Next.js.
+📄 A modern resume website template. Create and manage your resume in Markdown — built with [Tailwind CSS](https://tailwindcss.com/) and [React](https://react.dev/) framework [Next.js](https://nextjs.org/).
 
 ## Samples
 
 ![Sample 1](./examples/example.png)
 
-Visit [Live Demo](https://nextcv.vercel.app): https://nextcv.vercel.app
+> [!NOTE]
+> Visit [Live Demo](https://next-cv-example.vercel.app/): https://next-cv-example.vercel.app
+
+## Features
+
+- **Markdown Base**: Version control your resume with Git. All content is written in Markdown text.
+- **Internationalization**: Supports multiple languages. (TODO)
+- **Customizable**: Highly customizable using React.
 
 ## Quick Start
 
-- Deploy on Vercel
+- Deploy on Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fittuann%2FNextCV)
 

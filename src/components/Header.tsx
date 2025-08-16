@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import { MapPin, Mail, Phone, Download, Linkedin, Github } from "lucide-react";
 import { Info } from "@/data/types";
+import { IconLink } from "@/ui";
 
 interface HeaderProps {
   info: Info;
@@ -19,48 +19,23 @@ const Header: React.FC<HeaderProps> = ({ info }) => {
         </h2>
       </div>
       <div className="flex flex-col items-end space-y-2 text-sm">
-        <div className="flex items-center gap-2 transition-colors duration-300 text-gray-400 hover:text-white">
-          <MapPin className="h-4 w-4 flex-shrink-0" />
-          <span>{info.location}</span>
-        </div>
-        <Link
-          href={`mailto:${info.email}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="flex items-center gap-2 transition-colors duration-300 text-gray-400 hover:text-white">
-            <Mail className="h-4 w-4 flex-shrink-0" />
-            <span>{info.email}</span>
-          </div>
-        </Link>
-        <div className="flex items-center gap-2 transition-colors duration-300 text-gray-400 hover:text-white">
-          <Phone className="h-4 w-4 flex-shrink-0" />
-          <span>{info.phone}</span>
-        </div>
+        <IconLink icon={MapPin}>{info.location}</IconLink>
+        <IconLink href={`mailto:${info.email}`} icon={Mail}>
+          {info.email}
+        </IconLink>
+        <IconLink icon={Phone}>{info.phone}</IconLink>
         {info.social.map((social) => (
-          <Link
+          <IconLink
             key={social.network}
             href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            icon={social.network === "GitHub" ? Github : Linkedin}
           >
-            <div className="flex items-center gap-2 transition-colors duration-300 text-gray-400 hover:text-white">
-              {social.network === "GitHub" && (
-                <Github className="h-4 w-4 flex-shrink-0" />
-              )}
-              {social.network === "LinkedIn" && (
-                <Linkedin className="h-4 w-4 flex-shrink-0" />
-              )}
-              <span>{social.name}</span>
-            </div>
-          </Link>
+            {social.name}
+          </IconLink>
         ))}
-        <Link href={info.resume} target="_blank" rel="noopener noreferrer">
-          <div className="flex items-center gap-2 transition-colors duration-300 text-gray-400 hover:text-white">
-            <Download className="h-4 w-4 flex-shrink-0" />
-            <span>Resume</span>
-          </div>
-        </Link>
+        <IconLink href={info.resume} icon={Download}>
+          Resume
+        </IconLink>
       </div>
     </header>
   );

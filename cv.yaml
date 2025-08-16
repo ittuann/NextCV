@@ -48,7 +48,7 @@ projects:
     highlights:
       - Developed a web application with **React** and **Django**.
       - Implemented a **RESTful API**.
-  - name: Some Project 2
+  - name: Project B
     date: 2021-09
     summary: This is a summary of the project.
     url: https://github.com
