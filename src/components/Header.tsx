@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ info }) => {
       </div>
       <div className="flex flex-col items-end space-y-2 text-sm">
         <IconLink icon={MapPin}>{info.location}</IconLink>
-        <IconLink href={`mailto:${info.email}`} icon={Mail} external>
+        <IconLink href={`mailto:${info.email}`} icon={Mail}>
           {info.email}
         </IconLink>
         <IconLink icon={Phone}>{info.phone}</IconLink>
@@ -29,12 +29,11 @@ const Header: React.FC<HeaderProps> = ({ info }) => {
             key={social.network}
             href={social.url}
             icon={social.network === "GitHub" ? Github : Linkedin}
-            external
           >
             {social.name}
           </IconLink>
         ))}
-        <IconLink href={info.resume} icon={Download} external>
+        <IconLink href={info.resume} icon={Download}>
           Resume
         </IconLink>
       </div>

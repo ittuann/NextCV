@@ -6,20 +6,18 @@ interface IconLinkProps {
   href?: string;
   icon: LucideIcon;
   children: React.ReactNode;
-  external?: boolean;
-  className?: string;
+  isExternal?: boolean;
 }
 
 const IconLink: React.FC<IconLinkProps> = ({
   href,
   icon: Icon,
   children,
-  external = false,
-  className = "",
+  isExternal = true,
 }) => {
   const content = (
     <div
-      className={`flex items-center gap-2 transition-colors duration-300 text-gray-400 hover:text-white ${className}`}
+      className={`flex items-center gap-2 transition-colors duration-300 text-gray-400 hover:text-white`}
     >
       <Icon className="h-4 w-4 flex-shrink-0" />
       <span>{children}</span>
@@ -30,8 +28,8 @@ const IconLink: React.FC<IconLinkProps> = ({
     return (
       <Link
         href={href}
-        target={external ? "_blank" : undefined}
-        rel={external ? "noopener noreferrer" : undefined}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
       >
         {content}
       </Link>
