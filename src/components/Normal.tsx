@@ -9,7 +9,11 @@ interface NormalProps {
   icon?: LucideIcon;
 }
 
-const NormalComponent: React.FC<NormalProps> = ({ normal = [], name, icon = BookOpen }) => {
+const NormalComponent: React.FC<NormalProps> = ({
+  normal = [],
+  name,
+  icon = BookOpen,
+}) => {
   return (
     <section>
       <SectionHeader icon={icon} title={name || "Normal"} />

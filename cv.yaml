@@ -4,7 +4,7 @@ info:
     email: ittuann@outlook.com
     phone: +86 123-1234-1234
     location: China
-    resume: https://my-resume-proxy.jingcjie.workers.dev
+    resume: https://github.com/ittuann/NextCV/resume.pdf
     social:
       - network: GitHub
         name: GitHub@ittuann
@@ -29,7 +29,7 @@ education:
     location: Beijing, China
     highlights:
       - "GPA 3.0/4.0"
-      - "Awards [Outstanding Graduation Thesis](https://example.com)"
+      - "Awards [Outstanding Graduation Thesis](https://github.com/ittuann/NextCV)"
 
 experience:
   - name: Company A
@@ -41,7 +41,7 @@ experience:
       - Implemented a **RESTful API**.
 
 projects:
-  - name: "[Project A](https://github.com/)"
+  - name: "[Project A](https://github.com/ittuann/NextCV)"
     date: 2021-09
     summary: A web application.
     highlights:
@@ -57,7 +57,6 @@ awards:
   - name: Award A
     date: 2023-09
     summary: This is a summary of the award.
-    url: https://example.com
     highlights:
       - This is a highlight of the award.
 

@@ -18,6 +18,7 @@ const Header: React.FC<HeaderProps> = ({ info }) => {
           {info.title}
         </h2>
       </div>
+
       <div className="flex flex-col items-end space-y-2 text-sm">
         <IconLink icon={MapPin}>{info.location}</IconLink>
         <IconLink href={`mailto:${info.email}`} icon={Mail}>
