@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Education } from "@/data/types";
 import { Award } from "lucide-react";
-import { SectionHeader, ArticleCard, ArticleHeader, HighlightList } from "@/ui";
+import { SectionHeader, ArticleCard } from "@/ui";
 
 interface EducationProps {
   education: Education[];
@@ -16,19 +16,16 @@ const EducationComponent: React.FC<EducationProps> = ({ education }) => {
         <div>
           <div className="space-y-6">
             {education.map((edu) => (
-              <ArticleCard key={edu.name}>
-                <ArticleHeader
-                  title={`${edu.degree}, ${edu.name}, ${edu.area}`}
-                  date={edu.date}
-                  subtitle={edu.location}
-                />
-                <HighlightList
-                  highlights={edu.highlights}
-                  renderItem={(highlight) => (
-                    <ReactMarkdown>{highlight}</ReactMarkdown>
-                  )}
-                />
-              </ArticleCard>
+              <ArticleCard
+                key={edu.name}
+                title={`${edu.degree}, ${edu.name}, ${edu.area}`}
+                date={edu.date}
+                subtitle={edu.location}
+                highlights={edu.highlights}
+                renderItem={(highlight) => (
+                  <ReactMarkdown>{highlight}</ReactMarkdown>
+                )}
+              />
             ))}
           </div>
         </div>
