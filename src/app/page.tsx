@@ -41,11 +41,10 @@ export default function Page() {
           </div>
 
           <div className="col-span-1 space-y-12">
-            <div className="relative w-full flex justify-center mb-8"></div>
             <div className="flex justify-center">
               <Image
                 src="/avatar.png"
-                className="relative rounded-2xl shadow-xl border-2 border-gray-700 object-cover transition-transform duration-300 hover:scale-105 bg-gray-900"
+                className="rounded-2xl shadow-xl border-2 border-gray-700 bg-gray-900 object-cover hover:scale-105 transition-transform duration-300"
                 alt="Profile Picture"
                 width={420}
                 height={420}

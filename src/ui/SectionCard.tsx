@@ -2,7 +2,7 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 
 interface SectionCardProps {
-  title: React.ReactNode;
+  title: string;
   date?: string;
   subtitle?: string;
   highlights?: string[];
@@ -20,7 +20,9 @@ const SectionCard: React.FC<SectionCardProps> = ({
     >
       <div>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1">
-          <h3 className="text-lg font-semibold text-white">{title}</h3>
+          <h3 className="markdown-content text-lg font-semibold text-white ">
+            <ReactMarkdown>{title}</ReactMarkdown>
+          </h3>
           {date && (
             <span className="text-xs text-gray-500 font-mono mt-1 sm:mt-0">
               {date}

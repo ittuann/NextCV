@@ -1,6 +1,7 @@
 import React from "react";
 import { Skills } from "@/data/types";
 import { Wrench } from "lucide-react";
+import { SectionHeader } from "@/ui";
 
 interface SkillsProps {
   skills: Skills[];
@@ -9,11 +10,8 @@ interface SkillsProps {
 const SkillsComponent: React.FC<SkillsProps> = ({ skills }) => {
   return (
     <section>
-      <div className="flex items-center mb-6">
-        <Wrench className="h-6 w-6 text-gray-500 mr-3" />
-        <h2 className="text-2xl font-bold text-white tracking-tight">Skills</h2>
-        <div className="flex-grow border-t border-gray-700 ml-4"></div>
-      </div>
+      <SectionHeader icon={Wrench} title="Skills" />
+
       <div className="space-y-4">
         {skills.map((skill) => (
           <div key={skill.name}>
@@ -22,7 +20,7 @@ const SkillsComponent: React.FC<SkillsProps> = ({ skills }) => {
               {skill.items.map((item) => (
                 <span
                   key={item}
-                  className="bg-gray-800 text-gray-300 text-xs font-mono px-2 py-1 rounded-md border border-gray-700"
+                  className="bg-gray-800 text-gray-300 text-xs font-mono px-2 py-1 rounded-md border border-gray-700 hover:scale-105 transition-transform duration-300"
                 >
                   {item}
                 </span>

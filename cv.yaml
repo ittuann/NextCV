@@ -41,17 +41,15 @@ experience:
       - Implemented a **RESTful API**.
 
 projects:
-  - name: Project A
+  - name: "[Project A](https://github.com/)"
     date: 2021-09
     summary: A web application.
-    url: https://github.com
     highlights:
       - Developed a web application with **React** and **Django**.
       - Implemented a **RESTful API**.
   - name: Project B
     date: 2021-09
     summary: This is a summary of the project.
-    url: https://github.com
     highlights:
       - This is a highlight of the project.
 

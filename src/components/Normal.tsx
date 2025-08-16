@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Normal } from "@/data/types";
 import { BookOpen } from "lucide-react";
 import { SectionHeader, SectionCard } from "@/ui";
@@ -18,20 +17,7 @@ const NormalComponent: React.FC<NormalProps> = ({ normal = [], name }) => {
         {normal.map((item) => (
           <SectionCard
             key={item.name}
-            title={
-              item.url ? (
-                <Link
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                item.name
-              )
-            }
+            title={item.name}
             date={item.date}
             subtitle={item.summary}
             highlights={item.highlights}
