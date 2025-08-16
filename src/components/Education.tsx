@@ -1,7 +1,7 @@
 import React from "react";
 import { Education } from "@/data/types";
 import { Award } from "lucide-react";
-import { SectionHeader, ArticleCard } from "@/ui";
+import { SectionHeader, SectionCard } from "@/ui";
 
 interface EducationProps {
   education: Education[];
@@ -14,7 +14,7 @@ const EducationComponent: React.FC<EducationProps> = ({ education }) => {
 
       <div className="space-y-6">
         {education.map((edu) => (
-          <ArticleCard
+          <SectionCard
             key={edu.name}
             title={`${edu.degree}, ${edu.name}, ${edu.area}`}
             date={edu.date}

@@ -1,14 +1,14 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-interface ArticleProps {
+interface SectionCardProps {
   title: React.ReactNode;
   date?: string;
   subtitle?: string;
   highlights?: string[];
 }
 
-const ArticleCard: React.FC<ArticleProps> = ({
+const SectionCard: React.FC<SectionCardProps> = ({
   title,
   date,
   subtitle,
@@ -49,4 +49,4 @@ const ArticleCard: React.FC<ArticleProps> = ({
   );
 };
 
-export default ArticleCard;
+export default SectionCard;

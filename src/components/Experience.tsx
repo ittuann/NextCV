@@ -1,7 +1,7 @@
 import React from "react";
 import { Experience } from "@/data/types";
 import { Briefcase } from "lucide-react";
-import { SectionHeader, ArticleCard } from "@/ui";
+import { SectionHeader, SectionCard } from "@/ui";
 
 interface ExperienceProps {
   experience: Experience[];
@@ -14,7 +14,7 @@ const ExperienceComponent: React.FC<ExperienceProps> = ({ experience }) => {
 
       <div className="space-y-6">
         {experience.map((exp) => (
-          <ArticleCard
+          <SectionCard
             key={exp.name}
             title={exp.name}
             date={exp.date}

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Normal } from "@/data/types";
 import { BookOpen } from "lucide-react";
-import { SectionHeader, ArticleCard } from "@/ui";
+import { SectionHeader, SectionCard } from "@/ui";
 
 interface NormalProps {
   normal?: Normal[];
@@ -16,7 +16,7 @@ const NormalComponent: React.FC<NormalProps> = ({ normal = [], name }) => {
 
       <div className="space-y-6">
         {normal.map((item) => (
-          <ArticleCard
+          <SectionCard
             key={item.name}
             title={
               item.url ? (
