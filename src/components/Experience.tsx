@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import { Experience } from "@/data/types";
 import { Briefcase } from "lucide-react";
 import { SectionHeader, ArticleCard } from "@/ui";
@@ -22,9 +21,6 @@ const ExperienceComponent: React.FC<ExperienceProps> = ({ experience }) => {
                 date={exp.date}
                 subtitle={`${exp.position}, ${exp.location}`}
                 highlights={exp.highlights}
-                renderItem={(highlight) => (
-                  <ReactMarkdown>{highlight}</ReactMarkdown>
-                )}
               />
             ))}
           </div>

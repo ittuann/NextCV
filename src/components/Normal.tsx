@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import { Normal } from "@/data/types";
 import { BookOpen } from "lucide-react";
 import { SectionHeader, ArticleCard } from "@/ui";
@@ -35,11 +34,8 @@ const NormalComponent: React.FC<NormalProps> = ({ normal = [], name }) => {
                   )
                 }
                 date={item.date}
-                subtitle={<ReactMarkdown>{item.summary}</ReactMarkdown>}
+                subtitle={item.summary}
                 highlights={item.highlights}
-                renderItem={(highlight) => (
-                  <ReactMarkdown>{highlight}</ReactMarkdown>
-                )}
               />
             ))}
           </div>

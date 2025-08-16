@@ -1,9 +1,10 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 interface ArticleProps {
   title: React.ReactNode;
   date?: string;
-  subtitle?: React.ReactNode;
+  subtitle?: string;
   highlights?: string[];
   renderItem?: (highlight: string) => React.ReactNode;
   children?: React.ReactNode;
@@ -18,7 +19,6 @@ const ArticleCard: React.FC<ArticleProps> = ({
   subtitle,
   highlights,
   renderItem,
-  children,
   className = "",
   headerClassName = "",
   highlightClassName = "",
@@ -36,7 +36,11 @@ const ArticleCard: React.FC<ArticleProps> = ({
             </span>
           )}
         </div>
-        {subtitle && <div className="text-md text-gray-400 mb-2">{subtitle}</div>}
+        {subtitle && (
+          <div className="text-md text-gray-400 mb-2">
+            <ReactMarkdown>{subtitle}</ReactMarkdown>
+          </div>
+        )}
       </div>
 
       {highlights && highlights.length > 0 && (
@@ -45,13 +49,11 @@ const ArticleCard: React.FC<ArticleProps> = ({
         >
           {highlights.map((highlight) => (
             <li key={highlight} className="markdown-content">
-              {renderItem ? renderItem(highlight) : highlight}
+              {renderItem ? renderItem(highlight) : <ReactMarkdown>{highlight}</ReactMarkdown>}
             </li>
           ))}
         </ul>
       )}
-
-      {children}
     </article>
   );
 };

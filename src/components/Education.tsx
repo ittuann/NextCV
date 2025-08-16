@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import { Education } from "@/data/types";
 import { Award } from "lucide-react";
 import { SectionHeader, ArticleCard } from "@/ui";
@@ -22,9 +21,6 @@ const EducationComponent: React.FC<EducationProps> = ({ education }) => {
                 date={edu.date}
                 subtitle={edu.location}
                 highlights={edu.highlights}
-                renderItem={(highlight) => (
-                  <ReactMarkdown>{highlight}</ReactMarkdown>
-                )}
               />
             ))}
           </div>
