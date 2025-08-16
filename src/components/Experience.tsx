@@ -11,20 +11,17 @@ const ExperienceComponent: React.FC<ExperienceProps> = ({ experience }) => {
   return (
     <section>
       <SectionHeader icon={Briefcase} title="Experience" />
-      <div className="space-y-8">
-        <div>
-          <div className="space-y-6">
-            {experience.map((exp) => (
-              <ArticleCard
-                key={exp.name}
-                title={exp.name}
-                date={exp.date}
-                subtitle={`${exp.position}, ${exp.location}`}
-                highlights={exp.highlights}
-              />
-            ))}
-          </div>
-        </div>
+
+      <div className="space-y-6">
+        {experience.map((exp) => (
+          <ArticleCard
+            key={exp.name}
+            title={exp.name}
+            date={exp.date}
+            subtitle={`${exp.position}, ${exp.location}`}
+            highlights={exp.highlights}
+          />
+        ))}
       </div>
     </section>
   );

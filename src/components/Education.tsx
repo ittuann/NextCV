@@ -11,20 +11,17 @@ const EducationComponent: React.FC<EducationProps> = ({ education }) => {
   return (
     <section>
       <SectionHeader icon={Award} title="Education" />
-      <div className="space-y-8">
-        <div>
-          <div className="space-y-6">
-            {education.map((edu) => (
-              <ArticleCard
-                key={edu.name}
-                title={`${edu.degree}, ${edu.name}, ${edu.area}`}
-                date={edu.date}
-                subtitle={edu.location}
-                highlights={edu.highlights}
-              />
-            ))}
-          </div>
-        </div>
+
+      <div className="space-y-6">
+        {education.map((edu) => (
+          <ArticleCard
+            key={edu.name}
+            title={`${edu.degree}, ${edu.name}, ${edu.area}`}
+            date={edu.date}
+            subtitle={edu.location}
+            highlights={edu.highlights}
+          />
+        ))}
       </div>
     </section>
   );
