@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  /* To preview the theme: https://tweakcn.com/editor/theme */
+  /* 主色调 */
+  --primary: #000000;
+  --primary-foreground: #000000; /* 内容文本颜色 */
+  /* Base Colors */
+  --background: #000000;
+  --foreground: #000000;
+  /* 次色调 */
+  --secondary: #000000;
+  --secondary-foreground: #000000;
+  /* 强调颜色 */
+  --accent: #000000;
+  --accent-content: #000000;
+  --accent-foreground: #000000;
+  /* 柔和颜色 */
+  --muted: #000000;
+  --muted-foreground: #000000;
+  /* Typography */
+  --font-sans: Geist, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Geist Mono, monospace;
+  --tracking-normal: 0em;
+  /* Other */
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-content: var(--accent-content);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+  --radius-lg: var(--radius);
+}
+
+.markdown-content a,
+.react-markdown a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.3s ease;
+}
+
+.markdown-content a:hover,
+.react-markdown a:hover {
+  color: #4c5b6d;
+}
