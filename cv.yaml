@@ -1,0 +1,72 @@
+info:
+  - name: Air Wish
+    title: Open-source enthusiast
+    email: ittuann@outlook.com
+    phone: +86 123-1234-1234
+    location: China
+    resume: https://github.com/ittuann/NextCV/resume.pdf
+    social:
+      - network: GitHub
+        name: GitHub@ittuann
+        url: https://github.com/ittuann
+      - network: LinkedIn
+        name: LinkedIn
+        url: https://www.linkedin.com/
+    summary: NextCV is a resume configured using Markdown syntax. Built with React and powered by the Next.js framework.
+
+education:
+  - name: The University of Sydney
+    date: 2024-09 - Present
+    area: Computer Science
+    degree: BS
+    location: Sydney, Australia
+    highlights:
+      - "Campus Experience Example"
+  - name: Peking University
+    date: 2020-09 - 2024-06
+    area: Computer Science
+    degree: MS
+    location: Beijing, China
+    highlights:
+      - "GPA 3.0/4.0"
+      - "Awards [Outstanding Graduation Thesis](https://github.com/ittuann/NextCV)"
+
+experience:
+  - name: Company A
+    date: 2023-06 - 2023-09
+    position: SWE Summer Intern
+    location: Guangdong, China
+    highlights:
+      - Developed a web application with **React** and **Django**.
+      - Implemented a **RESTful API**.
+
+projects:
+  - name: "[Project A](https://github.com/ittuann/NextCV)"
+    date: 2021-09
+    summary: A web application.
+    highlights:
+      - Developed a web application with **React** and **Django**.
+      - Implemented a **RESTful API**.
+  - name: Project B
+    date: 2021-09
+    summary: This is a summary of the project.
+    highlights:
+      - This is a highlight of the project.
+
+awards:
+  - name: Award A
+    date: 2023-09
+    summary: This is a summary of the award.
+    highlights:
+      - This is a highlight of the award.
+
+skills:
+  - name: Programming
+    items:
+      - TypeScript
+      - JavaScript
+      - Python
+  - name: Frameworks
+    items:
+      - Next.js
+      - React

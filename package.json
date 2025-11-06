@@ -1,0 +1,48 @@
+{
+  "name": "next-cv",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Next CV/Resume",
+  "author": "ittuann <ittuann@outlook.com> (https://github.com/ittuann)",
+  "license": "APACHE-2.0",
+  "homepage": "https://github.com/ittuann/NextCV",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ittuann/NextCV.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ittuann/NextCV/issues",
+    "email": "ittuann@outlook.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "serve": "serve out/",
+    "format": "prettier --write '**/*.{js,jsx,mjs,ts,tsx,css,scss,json,yaml,yml,md}'",
+    "format:check": "prettier --check '**/*.{js,jsx,mjs,ts,tsx,css,scss,json,yaml,yml,md}'"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "lucide-react": "^0.539.0",
+    "next": "15.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-markdown": "^10.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "prettier": "^3.6.2",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
