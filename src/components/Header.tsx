@@ -2,6 +2,7 @@ import React from "react";
 import { MapPin, Mail, Phone, Download, Linkedin, Github } from "lucide-react";
 import { Info } from "@/data/types";
 import { IconLink } from "@/ui";
+import ThemeToggleButton from "./ThemesToggle";
 
 interface HeaderProps {
   info: Info;
@@ -37,6 +38,8 @@ const Header: React.FC<HeaderProps> = ({ info }) => {
         <IconLink href={info.resume} icon={Download}>
           Resume
         </IconLink>
+
+        {/* <ThemeToggleButton /> */}
       </div>
     </header>
   );
