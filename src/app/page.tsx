@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import type { Metadata } from "next";
 import fs from "fs";
-import yaml from "js-yaml";
 import path from "path";
+import yaml from "js-yaml";
 import { ResumeData } from "@/data/types";
 import { FolderOpen, Trophy } from "lucide-react";
 import {
